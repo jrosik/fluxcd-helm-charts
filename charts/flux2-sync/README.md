@@ -1,6 +1,6 @@
 # flux2-sync
 
-![Version: 1.7.1](https://img.shields.io/badge/Version-1.7.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.1](https://img.shields.io/badge/AppVersion-2.1.1-informational?style=flat-square)
+![Version: 1.8.0](https://img.shields.io/badge/Version-1.8.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.1](https://img.shields.io/badge/AppVersion-2.1.1-informational?style=flat-square)
 
 A Helm chart for flux2 GitRepository to sync with
 
@@ -34,6 +34,7 @@ This helm chart is maintain and released by the fluxcd-community on a best effor
 | gitRepository.spec.verify | object | `{}` | _Optional_ Verify OpenPGP signature for the Git commit HEAD points to. |
 | kustomization.annotations | object | `{}` |  |
 | kustomization.labels | object | `{}` |  |
+| kustomization.spec.components | list | `[]` | _Optional_ Components specifies relative paths to specifications of other Components.  |
 | kustomization.spec.decryption | object | `{}` | _Optional_ Decrypt Kubernetes secrets before applying them on the cluster. |
 | kustomization.spec.dependsOn | list | `[]` | _Optional_ DependsOn may contain a dependency.CrossNamespaceDependencyReference slice with references to Kustomization resources that must be ready before this Kustomization can be reconciled. |
 | kustomization.spec.force | bool | `false` | _Optional_ Force instructs the controller to recreate resources when patching fails due to an immutable field change. Defaults to false. |
